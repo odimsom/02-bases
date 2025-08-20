@@ -1,18 +1,24 @@
-import { ChangeDetectionStrategy, Component, signal, WritableSignal } from "@angular/core";
+import {
+  ChangeDetectionStrategy,
+  Component,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 import { Vehicle } from './algo';
-
 
 @Component({
   templateUrl: './counter-page.component.html',
   styleUrls: ['./counter-page.component.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterPageComponent {
   public counter: number = 0;
 
-  public counterSignal: WritableSignal<number> = signal(10);
+  public counterSignal = signal(10);
 
-  public algo: number = 0
+  public prueba = signal(12);
+
+  public algo: number = 0;
 
   public vehicles: Vehicle[] = [];
 
@@ -27,7 +33,7 @@ export class CounterPageComponent {
     this.algo += value;
     this.counter += value;
     // this.counterSignal.set(this.counterSignal() + value);
-    this.counterSignal.update( (current) => current + value )
+    this.counterSignal.update((current) => current + value);
   }
 
   public resetCounter(): void {
@@ -38,18 +44,18 @@ export class CounterPageComponent {
   public showVehicle(): void {
     this.vehicles = [
       {
-        nombre: "primero",
+        nombre: 'primero',
         details: {
-          marca: "mashleCar",
-          modelo: "hjdndkk344",
-          tipo: "todo terreno",
-          carroceria: "blindada",
+          marca: 'mashleCar',
+          modelo: 'hjdndkk344',
+          tipo: 'todo terreno',
+          carroceria: 'blindada',
           tamanioAro: 0,
-          cilindraje: "no se que eh jeso",
+          cilindraje: 'no se que eh jeso',
           caballos: 50000,
-          kilometros: 20
-        }
-      }
-    ]
+          kilometros: 20,
+        },
+      },
+    ];
   }
 }

@@ -18,7 +18,7 @@
 
         <dt class="col-sm-4">Capitalizado:</dt>
         <!-- <dd class="col-sm-8">{{ capitalize() }}</dd> -->
-        <dd class="col-sm-8">{{ name() | uppercase }} </dd>
+        <dd class="col-sm-8">{{ name() | uppercase }}</dd>
       </dl>
 
       <div class="text-center mt-4">
@@ -31,6 +31,12 @@
         <button (click)="resetForm()" class="btn btn-outline-danger mx-2">
           Reset
         </button>
+        <a
+          class="btn btn-outline-danger mx-2"
+          routerLink="/"
+          routerLinkActive="router-link-active"
+          >Back page</a
+        >
       </div>
     </div>
   </div>

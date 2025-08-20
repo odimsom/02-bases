@@ -1,0 +1,9 @@
+<div class="container mt-4">
+  <dragonball-character-add
+    (NewCharacter)="DragonBallService.ChangeCharacter($event)"
+  />
+  <dragonball-character-list
+    [characters]="DragonBallService.characters()"
+    listname="characters list"
+  />
+</div>

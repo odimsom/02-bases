@@ -1,16 +1,19 @@
-    <h1>Counter {{ counter }}</h1>
-    <h1>CounterSignal {{ counterSignal() }}</h1>
-    <h3>algo {{algo}}</h3>
+<h1>Counter {{ counter }}</h1>
+<h1>CounterSignal {{ counterSignal() }}</h1>
+<h3>algo {{ algo }}</h3>
 
-    <button class="button" type="button" (click)="isIncrement(1)"> +1 </button>
-    <button class="button" type="button" (click)="isIncrement(-1)"> -1 </button>
-    <button class="button" type="button" (click)="resetCounter()"> Reset </button>
-    <button class="button" type="button" (click)="isIncrement(1)">algo</button>
+<button class="button" type="button" (click)="isIncrement(1)">+1</button>
+<button class="button" type="button" (click)="isIncrement(-1)">-1</button>
+<button class="button" type="button" (click)="resetCounter()">Reset</button>
+<button class="button" type="button" (click)="isIncrement(1)">algo</button>
 
+<a class="btn btn-primary border border-4 border-black" href="/hero"
+  >Hero component</a
+>
 
+<h1>{{ prueba() }}</h1>
 
-    <!-- <h3>{{vehicles.forEach(val => return{`<h1>val</h1>`})}}</h3>
+<!-- <h3>{{vehicles.forEach(val => return{`<h1>val</h1>`})}}</h3>
     <button class="button" type="button" (click)="showVehicle()">algo</button> -->
 
-
-    <h2>Esto es un componente en angular</h2>
+<h2>Esto es un componente en angular</h2>

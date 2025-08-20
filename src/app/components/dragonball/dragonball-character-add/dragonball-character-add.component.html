@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h1>Agregar Character: {{ Name() }}</h1>
+  <form class="mb-3">
+    <div class="mb-3">
+      <label for="characterName" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="characterName"
+        placeholder="Ingrese el nombre del personaje"
+        [value]="Name()"
+        (change)="Name.set(txtName.value)"
+        (input)="Name.set(txtName.value)"
+        #txtName
+      />
+    </div>
+    <div class="mb-3">
+      <label for="characterPower" class="form-label">Poder</label>
+      <input
+        type="number"
+        class="form-control"
+        id="characterPower"
+        placeholder="Ingrese el poder del personaje"
+        [value]="Power()"
+        (change)="Power.set(+numberPower.value)"
+        (input)="Power.set(+numberPower.value)"
+        #numberPower
+      />
+    </div>
+    <button (click)="ChangeCharacter()" type="button" class="btn btn-primary">
+      Agregar
+    </button>
+  </form>
+</div>

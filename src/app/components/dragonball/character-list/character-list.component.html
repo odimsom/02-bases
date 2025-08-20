@@ -1,0 +1,18 @@
+<h2>{{ listname() }}</h2>
+<ol class="list-group">
+  @for (character of characters(); track character.id) { @if (character.power >
+  1000) {
+  <li class="list-group-item">
+    Character: {{ character.name }} - Poder:
+    <strong
+      [class.text-danger]="character.power > 9000"
+      [class.text-primary]="character.power < 9000"
+      >{{ character.power }}</strong
+    >
+  </li>
+  }@else {
+  <li>
+    <strong>este personaje no silve</strong>
+  </li>
+  } }
+</ol>
